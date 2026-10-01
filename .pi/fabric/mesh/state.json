@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "revisionFormat": 2,
+  "entries": {
+    "topology/peer-seq": {
+      "key": "topology/peer-seq",
+      "value": {
+        "format": 1,
+        "next": 2
+      },
+      "version": 2,
+      "updatedAt": 1790798934204,
+      "updatedBy": {
+        "id": "session:01a0f3d6-4ef9-7641-9bd1-70e134628286",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a0f3d6-4ef9-7641-9bd1-70e134628286"
+      }
+    },
+    "topology/participants/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814": {
+      "key": "topology/participants/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814",
+      "value": {
+        "format": 1,
+        "id": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "kind": "root",
+        "rootId": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "ownerHostId": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "ownerIdentityId": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [],
+        "cwd": "/Users/ali/Downloads/MyMac/Projects/cms-admin",
+        "sessionId": "01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "model": "openai-codex/gpt-6.1-sol",
+        "thinking": "medium",
+        "startedAt": 1790797139312,
+        "updatedAt": 1790798886629,
+        "pendingMessages": false,
+        "controlProtocol": "v1",
+        "label": "CA-1"
+      },
+      "version": 335,
+      "updatedAt": 1790798886633,
+      "updatedBy": {
+        "id": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a0f3d1-b0e0-7004-89f4-f02d676e3b53"
+      }
+    },
+    "topology/hosts/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814": {
+      "key": "topology/hosts/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814",
+      "value": {
+        "format": 1,
+        "id": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "rootId": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "identity": {
+          "id": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "01a0f3d1-b0e0-7004-89f4-f02d676e3b53"
+        },
+        "startedAt": 1790797139313,
+        "updatedAt": 1790798886634,
+        "expiresAt": 1790798901634
+      },
+      "version": 336,
+      "updatedAt": 1790798886635,
+      "updatedBy": {
+        "id": "session:01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a0f3d1-b0e0-7004-89f4-f02d676e3b53"
+      }
+    }
+  },
+  "highWater": 2122,
+  "versions": {
+    "topology/peer-seq": 2,
+    "sessions/01a0f3d1-b0e0-7004-89f4-f02d676e3b53": 334,
+    "topology/participants/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814": 335,
+    "topology/hosts/8ddff5b85099921aac4249ac6103a8714682f7e69d361275342064ff345f0814": 336,
+    "sessions/01a0f3d6-4ef9-7641-9bd1-70e134628286": 1374,
+    "topology/participants/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5": 1376,
+    "topology/hosts/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5": 1377
+  },
+  "tombstoneOrder": [
+    "sessions/01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
+    "sessions/01a0f3d6-4ef9-7641-9bd1-70e134628286",
+    "topology/participants/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5",
+    "topology/hosts/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5"
+  ]
+}

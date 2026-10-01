@@ -1,0 +1,17 @@
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { posts } from '../content'
+
+export const Route = createFileRoute('/')({
+  loader: () => ({ latest: posts.slice(0, 4), published: posts.filter((p) => p.status === 'published').length, drafts: posts.filter((p) => p.status === 'draft').length, review: posts.filter((p) => p.status === 'review').length }),
+  component: Overview,
+})
+
+function Overview() {
+  const { latest, published, drafts, review } = Route.useLoaderData()
+  return <div className="page">
+    <div className="page-heading"><div><div className="date-line">Thursday, May 14, 2026</div><h1>Good morning, Olivia <span className="wave">✳</span></h1><p>Here’s what’s happening with your stories today.</p></div><Link to="/posts" search={{ q: '', status: 'all', sort: 'newest' }} className="button button-primary">View all content <span aria-hidden="true">↗</span></Link></div>
+    <div className="overview-grid"><section className="feature-panel"><div className="feature-art" aria-hidden="true"><div className="art-sun"></div><div className="art-hill hill-one"></div><div className="art-hill hill-two"></div><span>FOLIO / NO. 01</span></div><div className="feature-copy"><span className="feature-kicker">The editorial desk</span><h2>Stories worth sharing start here.</h2><p>A home for every idea, draft, and published piece. Keep the good work moving.</p><Link to="/posts" search={{ q: '', status: 'all', sort: 'newest' }} className="feature-link">Explore your content <span aria-hidden="true">↗</span></Link></div></section>
+      <section className="snapshot"><div className="section-label">At a glance <span>↗</span></div><div className="stat-row"><span className="stat-icon blue">▤</span><div><strong>{posts.length.toString().padStart(2, '0')}</strong><small>Total stories</small></div></div><div className="stat-row"><span className="stat-icon green">✓</span><div><strong>{published.toString().padStart(2, '0')}</strong><small>Published</small></div></div><div className="stat-row"><span className="stat-icon amber">◷</span><div><strong>{review.toString().padStart(2, '0')}</strong><small>In review</small></div></div><div className="stat-row"><span className="stat-icon violet">✎</span><div><strong>{drafts.toString().padStart(2, '0')}</strong><small>Drafts</small></div></div></section></div>
+    <section className="recent-section"><div className="section-title"><div><h2>Recent stories</h2><p>Pick up where your team left off.</p></div><Link to="/posts" search={{ q: '', status: 'all', sort: 'newest' }} className="text-link">View all <span aria-hidden="true">↗</span></Link></div><div className="story-table"><div className="table-head"><span>Story</span><span>Status</span><span>Last updated</span><span></span></div>{latest.map((post) => <Link key={post.id} to="/posts/$postId" params={{ postId: post.id }} className="story-row"><span className="story-title"><span className="story-mini-icon">▤</span><span><strong>{post.title}</strong><small>{post.category} <span className="separator">·</span> {post.author}</small></span></span><span><span className={`status status-${post.status}`}><i></i>{post.status === 'review' ? 'In review' : post.status}</span></span><span className="row-date">{new Date(`${post.date}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span><span className="row-arrow">↗</span></Link>)}</div></section>
+  </div>
+}
