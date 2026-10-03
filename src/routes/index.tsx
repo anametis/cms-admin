@@ -60,11 +60,18 @@ function Overview() {
           <h1>Your editorial desk</h1>
           <p>A little clarity for every idea, draft, and published story.</p>
         </div>
-        <Button asChild className='min-h-11'>
-          <Link to='/posts' search={{ q: '', status: 'all', sort: 'newest' }}>
-            View all content
-            <ArrowUpRight aria-hidden='true' />
-          </Link>
+        <Button
+          nativeButton={false}
+          className='min-h-11'
+          render={
+            <Link
+              to='/posts'
+              search={{ q: '', status: 'all', sort: 'newest' }}
+            />
+          }
+        >
+          View all content
+          <ArrowUpRight aria-hidden='true' />
         </Button>
       </div>
       <section aria-labelledby='stats-heading'>
@@ -108,14 +115,19 @@ function Overview() {
               A home for every idea. Find your next draft, see what’s ready for
               review, and keep the good work moving.
             </p>
-            <Button variant='link' asChild className='mt-4 min-h-11 px-0'>
-              <Link
-                to='/posts'
-                search={{ q: '', status: 'draft', sort: 'newest' }}
-              >
-                Explore your drafts
-                <ArrowUpRight aria-hidden='true' />
-              </Link>
+            <Button
+              variant='link'
+              nativeButton={false}
+              className='mt-4 min-h-11 px-0'
+              render={
+                <Link
+                  to='/posts'
+                  search={{ q: '', status: 'draft', sort: 'newest' }}
+                />
+              }
+            >
+              Explore your drafts
+              <ArrowUpRight aria-hidden='true' />
             </Button>
           </CardContent>
           <div
@@ -164,11 +176,19 @@ function Overview() {
               Pick up where your team left off.
             </p>
           </div>
-          <Button variant='ghost' asChild className='min-h-11'>
-            <Link to='/posts' search={{ q: '', status: 'all', sort: 'newest' }}>
-              View all
-              <ArrowUpRight aria-hidden='true' />
-            </Link>
+          <Button
+            variant='ghost'
+            nativeButton={false}
+            className='min-h-11'
+            render={
+              <Link
+                to='/posts'
+                search={{ q: '', status: 'all', sort: 'newest' }}
+              />
+            }
+          >
+            View all
+            <ArrowUpRight aria-hidden='true' />
           </Button>
         </div>
         <div className='overflow-hidden rounded-xl border bg-card'>

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+storybook-static/
+.tanstack/
+.pi/
+src/routeTree.gen.ts
+package-lock.json
+pnpm-lock.yaml
+SHADCN-ADMIN-LICENSE

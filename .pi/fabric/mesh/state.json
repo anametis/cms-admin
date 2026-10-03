@@ -133,34 +133,6 @@
         "sessionId": "01a0f422-0f95-74e5-8bdf-7ab7fb0c5081"
       }
     },
-    "sessions/01a0f89b-763b-7656-aeed-17a30e68124f": {
-      "key": "sessions/01a0f89b-763b-7656-aeed-17a30e68124f",
-      "value": {
-        "id": "session:01a0f89b-763b-7656-aeed-17a30e68124f",
-        "name": "CA-4",
-        "label": "CA-4",
-        "kind": "peer",
-        "status": "idle",
-        "runner": "pi",
-        "transport": "host",
-        "cwd": "/Users/ali/Downloads/MyMac/Projects/cms-admin",
-        "sessionId": "01a0f89b-763b-7656-aeed-17a30e68124f",
-        "model": "openai-codex/gpt-6.1-sol",
-        "thinking": "medium",
-        "startedAt": 1790877412572,
-        "updatedAt": 1790878112825,
-        "pendingMessages": false,
-        "local": false
-      },
-      "version": 21244,
-      "updatedAt": 1790878112834,
-      "updatedBy": {
-        "id": "session:01a0f89b-763b-7656-aeed-17a30e68124f",
-        "name": "main",
-        "kind": "main",
-        "sessionId": "01a0f89b-763b-7656-aeed-17a30e68124f"
-      }
-    },
     "topology/participants/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613": {
       "key": "topology/participants/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613",
       "value": {
@@ -174,23 +146,19 @@
         "status": "idle",
         "runner": "pi",
         "transport": "host",
-        "capabilities": [
-          "steer",
-          "followUp",
-          "fabric"
-        ],
+        "capabilities": [],
         "cwd": "/Users/ali/Downloads/MyMac/Projects/cms-admin",
         "sessionId": "01a0f89b-763b-7656-aeed-17a30e68124f",
         "model": "openai-codex/gpt-6.1-sol",
         "thinking": "medium",
         "startedAt": 1790877412572,
-        "updatedAt": 1790878112826,
+        "updatedAt": 1790940359009,
         "pendingMessages": false,
         "controlProtocol": "v1",
         "label": "CA-4"
       },
-      "version": 21245,
-      "updatedAt": 1790878112839,
+      "version": 27513,
+      "updatedAt": 1790940359019,
       "updatedBy": {
         "id": "session:01a0f89b-763b-7656-aeed-17a30e68124f",
         "name": "main",
@@ -211,11 +179,11 @@
           "sessionId": "01a0f89b-763b-7656-aeed-17a30e68124f"
         },
         "startedAt": 1790877412572,
-        "updatedAt": 1790878112841,
-        "expiresAt": 1790878127841
+        "updatedAt": 1790940359020,
+        "expiresAt": 1790940374020
       },
-      "version": 21246,
-      "updatedAt": 1790878112842,
+      "version": 27514,
+      "updatedAt": 1790940359022,
       "updatedBy": {
         "id": "session:01a0f89b-763b-7656-aeed-17a30e68124f",
         "name": "main",
@@ -224,7 +192,7 @@
       }
     }
   },
-  "highWater": 21552,
+  "highWater": 40356,
   "versions": {
     "topology/peer-seq": 4,
     "sessions/01a0f3d1-b0e0-7004-89f4-f02d676e3b53": 334,
@@ -236,15 +204,16 @@
     "sessions/01a0f422-0f95-74e5-8bdf-7ab7fb0c5081": 8445,
     "topology/participants/ebc3a11a65f47e44edbd52494c628276472afe212673577e99c078c2eb091022": 8446,
     "topology/hosts/ebc3a11a65f47e44edbd52494c628276472afe212673577e99c078c2eb091022": 8447,
-    "sessions/01a0f89b-763b-7656-aeed-17a30e68124f": 21244,
-    "topology/participants/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613": 21245,
-    "topology/hosts/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613": 21246
+    "sessions/01a0f89b-763b-7656-aeed-17a30e68124f": 27512,
+    "topology/participants/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613": 27513,
+    "topology/hosts/41b484de9d40d02a3f92893da578a724f1ce75e96d0eb79b6f9a88c3e38d4613": 27514
   },
   "tombstoneOrder": [
     "sessions/01a0f3d1-b0e0-7004-89f4-f02d676e3b53",
     "sessions/01a0f3d6-4ef9-7641-9bd1-70e134628286",
     "topology/participants/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5",
     "topology/hosts/3c43f7bab7201d3a4a6c0d6003f92c9094ebb50be79efe23a9227e6bd8957be5",
-    "sessions/01a0f422-0f95-74e5-8bdf-7ab7fb0c5081"
+    "sessions/01a0f422-0f95-74e5-8bdf-7ab7fb0c5081",
+    "sessions/01a0f89b-763b-7656-aeed-17a30e68124f"
   ]
 }

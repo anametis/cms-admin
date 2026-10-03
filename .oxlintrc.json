@@ -2,7 +2,7 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["react", "typescript", "oxc", "jsx-a11y"],
   "jsPlugins": ["@shadcn/lint"],
-  "ignorePatterns": ["dist/**", "src/routeTree.gen.ts"],
+  "ignorePatterns": ["dist/**", "storybook-static/**", "src/routeTree.gen.ts"],
   "rules": {
     "react/rules-of-hooks": "error",
     "react/only-export-components": [
@@ -18,7 +18,12 @@
   },
   "overrides": [
     {
-      "files": ["src/routes/**/*.tsx", "src/components/ui/sidebar.tsx"],
+      "files": [
+        "src/routes/**/*.tsx",
+        "src/components/ui/sidebar.tsx",
+        "src/**/*.stories.tsx",
+        ".storybook/preview.tsx"
+      ],
       "rules": { "react/only-export-components": "off" }
     }
   ]

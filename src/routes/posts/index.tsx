@@ -53,22 +53,23 @@ function ContentList() {
               <Button
                 key={value}
                 variant={status === value ? 'secondary' : 'ghost'}
-                asChild
+                nativeButton={false}
                 className='min-h-11 px-3'
+                render={
+                  <Link
+                    to='/posts'
+                    search={{ q, sort, status: value }}
+                    aria-current={status === value ? 'page' : undefined}
+                    className={cn(status === value && 'font-semibold')}
+                  />
+                }
               >
-                <Link
-                  to='/posts'
-                  search={{ q, sort, status: value }}
-                  aria-current={status === value ? 'page' : undefined}
-                  className={cn(status === value && 'font-semibold')}
-                >
-                  {label}
-                  <span className='rounded bg-muted px-1.5 py-0.5 text-xs text-muted-foreground tabular-nums'>
-                    {value === 'all'
-                      ? posts.length
-                      : posts.filter((post) => post.status === value).length}
-                  </span>
-                </Link>
+                {label}
+                <span className='rounded bg-muted px-1.5 py-0.5 text-xs text-muted-foreground tabular-nums'>
+                  {value === 'all'
+                    ? posts.length
+                    : posts.filter((post) => post.status === value).length}
+                </span>
               </Button>
             ))}
           </fieldset>
@@ -147,13 +148,18 @@ function ContentList() {
             <p className='max-w-sm text-sm leading-relaxed text-muted-foreground'>
               Try another search or status to find what you’re looking for.
             </p>
-            <Button variant='outline' asChild className='mt-2 min-h-11'>
-              <Link
-                to='/posts'
-                search={{ q: '', status: 'all', sort: 'newest' }}
-              >
-                Clear filters
-              </Link>
+            <Button
+              variant='outline'
+              nativeButton={false}
+              className='mt-2 min-h-11'
+              render={
+                <Link
+                  to='/posts'
+                  search={{ q: '', status: 'all', sort: 'newest' }}
+                />
+              }
+            >
+              Clear filters
             </Button>
           </div>
         )}

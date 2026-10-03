@@ -26,11 +26,16 @@ function StoryDetail() {
   const post = Route.useLoaderData()
   return (
     <div className='page'>
-      <Button variant='ghost' asChild className='-ml-3 min-h-11'>
-        <Link to='/posts' search={{ q: '', status: 'all', sort: 'newest' }}>
-          <ArrowLeft aria-hidden='true' />
-          All content
-        </Link>
+      <Button
+        variant='ghost'
+        nativeButton={false}
+        className='-ml-3 min-h-11'
+        render={
+          <Link to='/posts' search={{ q: '', status: 'all', sort: 'newest' }} />
+        }
+      >
+        <ArrowLeft aria-hidden='true' />
+        All content
       </Button>
       <div className='max-w-3xl space-y-4'>
         <div className='flex flex-wrap items-center gap-3 text-sm text-muted-foreground'>

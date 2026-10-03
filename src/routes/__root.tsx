@@ -116,8 +116,8 @@ function ErrorScreen({ error, reset }: { error: unknown; reset: () => void }) {
       <Button onClick={reset} className='min-h-11'>
         Try again
       </Button>
-      <Button variant='link' asChild>
-        <Link to='/'>Back to overview</Link>
+      <Button variant='link' nativeButton={false} render={<Link to='/' />}>
+        Back to overview
       </Button>
     </div>
   )
@@ -135,8 +135,12 @@ export const Route = createRootRoute({
     <div className='boundary'>
       <h1>Page not found</h1>
       <p>There’s nothing at this address.</p>
-      <Button asChild className='min-h-11'>
-        <Link to='/'>Back to overview</Link>
+      <Button
+        nativeButton={false}
+        className='min-h-11'
+        render={<Link to='/' />}
+      >
+        Back to overview
       </Button>
     </div>
   ),
